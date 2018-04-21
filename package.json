@@ -1,14 +1,20 @@
 {
-  "name": "IE Project",
+  "name": "projectie",
   "version": "1.0.0",
   "main": "app.js",
   "author": "Piotr SMuga",
   "license": "MIT",
   "dependencies": {
     "babel-runtime": "^6.26.0",
+    "bcrypt": "^2.0.0",
+    "dotenv-safe": "^5.0.1",
     "express": "^4.16.2",
     "mongodb": "^3.0.4",
-    "mongoose": "^5.0.10"
+    "mongoose": "^5.0.10",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^4.0.0"
   },
   "scripts": {
     "start": "node .",
@@ -20,6 +26,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "nodemon": "^1.17.1",
-    "source-map-support": "^0.5.3"
+    "source-map-support": "^0.5.4"
   }
 }

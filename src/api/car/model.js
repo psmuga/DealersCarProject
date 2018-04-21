@@ -29,8 +29,11 @@ const carSchema = new Schema({
     seats: {
         type: Number,
         trim: true
+    },
+    cost: {
+        type: Number,
+        trim: true
     }
-    
 }, {
     timestamps: true,
     // toJSON: {
@@ -49,7 +52,8 @@ carSchema.methods = {
                 return {
                     id: this.id,
                     brand: this.brand,
-                    model: this.model              
+                    model: this.model,
+                    cost: this.cost             
                 }
             default:
                 // full view
@@ -61,7 +65,8 @@ carSchema.methods = {
                     production: this.production,
                     engineType: this.engineType,
                     engineCapacity: this.engineCapacity,
-                    seats: this.seats
+                    seats: this.seats,
+                    cost: this.cost
                 }
         }
     }

@@ -4,7 +4,7 @@ import Dealers from './model'
 const populateOpt = {
     path: 'cars',
     model: 'Car',
-    select: 'id brand model'
+    select: 'id brand model cost'
 }
 
 export const index = (req, res, next) => {

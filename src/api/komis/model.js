@@ -15,7 +15,7 @@ const dealerSchema = new Schema({
         ref: 'Car'
     }
 }, {
-    timestamps: true,
+    timestamps: true
     // toJSON: {
     //     virtuals: true,
     //     transform: (obj, ret) => { delete ret._id }
