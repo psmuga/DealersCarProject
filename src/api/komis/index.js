@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import {index, show, create, update, destroy, searchByName, count, listcount, paginatedIndex} from './controller'
-
+import {token} from "../../services/passport"
 
 const router = new Router()
 
@@ -15,9 +15,9 @@ router.get('/index/:limit?/:skip?', paginatedIndex)
 // Core examples - you need to have it in your project!
 router.get('/', index)
 router.get('/:id', show)
-router.post('/', create)
-router.put('/:id', update)
-router.delete('/:id', destroy)
+router.post('/',token({required: true, roles: ['admin']}), create)
+router.put('/:id', token({required: true, roles: ['admin']}), update)
+router.delete('/:id',token({required: true, roles: ['admin']}), destroy)
 
 
 export default router
